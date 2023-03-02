@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>task Amount</title>
+   <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
+<style>
+*{
+background-color:#00bcd4;
+margin:0;
+padding:0;
+box-sizing:border-box;	
+}
+
+
+</style>
+</head>
+<section>
+<form>
+<label for="amount">Enter The Amount </label>
+<input type="text" id="amount">
+<label for="amount">Percentage</label>
+<input type="text" id="percentage">
+<button type="submit">Click Karo</button>
+<label for="amount-tips">Percentage Amount</label>
+<input type="text" id="percentageamount">
+<label for="total-amount">Total Amount</label>
+<input type="text" id="totalamount">
+<div id="result"></div>
+</form>
+
+</section>
+<script>
+           
+		let form=document.querySelector('form');
+		form.addEventListener('submit',function(e){
+		e.preventDefault();
+		let amount=parseInt(document.getElementById('amount').value);
+		let percentage=parseInt(document.getElementById('percentage').value);
+		let percentageamount=document.getElementById('percentageamount');
+		let totalamount=document.getElementById('totalamount');
+		let result=document.getElementById('result');
+
+		let abinesh=amount*(percentage/100);    
+		percentageamount.value=abinesh;
+		totalamount .value=amount+abinesh;
+       })
+	   
+</script>
+</body>
+</html>
